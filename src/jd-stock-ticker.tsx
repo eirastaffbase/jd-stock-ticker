@@ -155,6 +155,7 @@ export const JDStockTicker = ({
       overflow: "hidden",
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
+      paddingBottom: "0px",
     },
     companyName: {
       fontSize: calculateFontSize(0.85), // Base: 0.85em
