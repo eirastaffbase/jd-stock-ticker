@@ -24,7 +24,7 @@ export const configurationSchema: JSONSchema7 = {
       type: "string",
       title: "Custom logo URL",
       default:
-        "https://jdonline.staffbase.com/api/media/secure/external/v2/image/upload/680a642ac83d6e736cfc366c.png",
+        "https://cdn.freebiesupply.com/images/large/2x/john-deere-logo-png-transparent.png",
     },
     fontsizeadjustment: {
       type: "integer", // Using integer for whole percentages

@@ -86,7 +86,7 @@ const blockDefinition: BlockDefinition = {
     blockLevel: 'block',
     configurationSchema: configurationSchema,
     uiSchema: uiSchema,
-    label: 'Stock Ticker',
+    label: 'JD Stock Ticker',
     iconUrl: icon
 };
 

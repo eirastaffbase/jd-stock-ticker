@@ -24,7 +24,7 @@ const JD_ENDPOINT  =
 const JD_SYMBOL    = "DE";
 const JD_NAME      = "Deere & Company";
 const JD_LOGO_FALLBACK =
-  "https://jdonline.staffbase.com/api/media/secure/external/v2/image/upload/680a642ac83d6e736cfc366c.png";
+  "https://cdn.freebiesupply.com/images/large/2x/john-deere-logo-png-transparent.png";
 
 /* ------------------------------------------------------------------ */
 /* ▸ Props                                                             */
@@ -114,8 +114,8 @@ export const JDStockTicker = ({
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between", // Ensures price info is pushed to the right
-      fontFamily: "Arial, sans-serif",
-      padding: "0.5rem", // Similar to example's padding
+      padding: "0.5rem", 
+      paddingTop: "0.1rem",
       width: "100%",
       boxSizing: "border-box",
       minHeight: "70px", // Adjusted min height
