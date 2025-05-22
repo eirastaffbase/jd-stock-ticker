@@ -1,4 +1,4 @@
-# staffbase / stock-ticker
+# staffbase / jd-stock-ticker
 
 ## Installation
 

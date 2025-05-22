@@ -19,7 +19,7 @@ import "webpack-dev-server";
 
 const config: webpack.Configuration = merge(common, {
   entry: {
-    "staffbase.stock-ticker": "./src/dev.ts",
+    "staffbase.jd-stock-ticker": "./src/dev.ts",
     config: "./dev/config.tsx",
     bootstrap: "./dev/bootstrap.ts",
   },

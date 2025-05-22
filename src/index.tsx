@@ -15,9 +15,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { BlockFactory, BlockDefinition, ExternalBlockDefinition, BaseBlock } from "widget-sdk";
-import { StockTickerProps, StockTicker } from "./stock-ticker";
+import { JDStockTickerProps, JDStockTicker } from "./jd-stock-ticker";
 import { configurationSchema, uiSchema } from "./configuration-schema";
-import icon from "../resources/stock-ticker.svg";
+import icon from "../resources/jd-stock-ticker.svg";
 import pkg from '../package.json'
 
 /**
@@ -28,6 +28,7 @@ const widgetAttributes: string[] = [
   'weeks',
   'logo',
   'stockgraphcolor',
+  'fontsizeadjustment',
 ];
 
 /**
@@ -36,17 +37,17 @@ const widgetAttributes: string[] = [
  */
 const factory: BlockFactory = (BaseBlockClass, _widgetApi) => {
   /**
-   *  <stock-ticker symbol="world!"></stock-ticker>
+   *  <jd-stock-ticker symbol="world!"></jd-stock-ticker>
    */
-  return class StockTickerBlock extends BaseBlockClass implements BaseBlock {
+  return class JDStockTickerBlock extends BaseBlockClass implements BaseBlock {
     private _root: ReactDOM.Root | null = null;
 
     public constructor() {
       super();
     }
 
-    private get props(): StockTickerProps {
-      const attrs = this.parseAttributes<StockTickerProps>();
+    private get props(): JDStockTickerProps {
+      const attrs = this.parseAttributes<JDStockTickerProps>();
       return {
         ...attrs,
         contentLanguage: this.contentLanguage,
@@ -55,7 +56,7 @@ const factory: BlockFactory = (BaseBlockClass, _widgetApi) => {
 
     public renderBlock(container: HTMLElement): void {
       this._root ??= ReactDOM.createRoot(container);
-      this._root.render(<StockTicker {...this.props} />);
+      this._root.render(<JDStockTicker {...this.props} />);
     }
 
     /**
@@ -79,7 +80,7 @@ const factory: BlockFactory = (BaseBlockClass, _widgetApi) => {
  * The definition of the block, to let it successful register to the hosting application
  */
 const blockDefinition: BlockDefinition = {
-    name: "stock-ticker",
+    name: "jd-stock-ticker",
     factory: factory,
     attributes: widgetAttributes,
     blockLevel: 'block',

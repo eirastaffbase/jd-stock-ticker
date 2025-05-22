@@ -15,7 +15,7 @@ import * as webpack from "webpack";
 
 const config: webpack.Configuration = {
   entry: {
-    "staffbase.stock-ticker": "./src/index.tsx",
+    "staffbase.jd-stock-ticker": "./src/index.tsx",
   },
   module: {
     rules: [
@@ -29,7 +29,7 @@ const config: webpack.Configuration = {
         use: [{ loader: "@svgr/webpack", options: { icon: true } }],
       },
       {
-        test: /stock-ticker\.svg$/,
+        test: /jd-stock-ticker\.svg$/,
         use: [
           {
             loader: "url-loader",
